@@ -6,32 +6,32 @@ public class Auto {
 	private String nombreAuto;
 	private Float inversionInicial;
 	private Integer duracion;
-	private ArrayList<CostosAño> costosAnuales;
+	private ArrayList<CostosAno> costosAnuales;
 	
 	public Auto(String nombreAuto, Float inversionInicial, Integer duracion) {
 		this.nombreAuto = nombreAuto;
 		this.inversionInicial = inversionInicial;
 		this.duracion = duracion;
-		costosAnuales = new ArrayList<CostosAño>();
+		costosAnuales = new ArrayList<CostosAno>();
 		for(int i=0;i<duracion;i++) {
-			costosAnuales.add(i, new CostosAño(i));
+			costosAnuales.add(i, new CostosAno(i));
 		}
 	}
 	
-	public void agregarCosto(Integer año, Float valor) {
-		costosAnuales.get(año).agregarCosto(valor);
+	public void agregarCosto(Integer ano, Float valor) {
+		costosAnuales.get(ano).agregarCosto(valor);
 	}
 	
-	public Float getPrecioReventa(Integer año) {
-		return costosAnuales.get(año).getPrecioReventa();
+	public Float getPrecioReventa(Integer ano) {
+		return costosAnuales.get(ano).getPrecioReventa();
 	}
 	
-	public void setPrecioReventa(Integer año, Float valor) {
-		costosAnuales.get(año).setPrecioReventa(valor);
+	public void setPrecioReventa(Integer ano, Float valor) {
+		costosAnuales.get(ano).setPrecioReventa(valor);
 	}
 	
-	public ArrayList<Float> getCostos(int año){
-		return costosAnuales.get(año).getCostos();
+	public ArrayList<Float> getCostos(int ano){
+		return costosAnuales.get(ano).getCostos();
 	}
 	
 	public int getDuracion() {

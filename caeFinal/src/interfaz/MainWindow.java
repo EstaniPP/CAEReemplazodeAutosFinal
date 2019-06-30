@@ -83,11 +83,11 @@ public class MainWindow extends JFrame {
 		contentPane.add(lblCae);
 		
 		JLabel lblTasaDeInteres = new JLabel("Tasa de interes:");
-		lblTasaDeInteres.setBounds(12, 48, 100, 16);
+		lblTasaDeInteres.setBounds(12, 48, 115, 16);
 		contentPane.add(lblTasaDeInteres);
 		
 		textField = new JTextField();
-		textField.setBounds(108, 45, 109, 22);
+		textField.setBounds(131, 46, 109, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		this.actualizarTabla();
@@ -100,7 +100,7 @@ public class MainWindow extends JFrame {
 							+ "\n Consejo: Debe utilizar punto para separar la parte entera de la fraccionaria.");
 				}else {
 					if(comboBox_1.getSelectedIndex()==0) {
-						JOptionPane.showMessageDialog(null, "Debe seleccionar un año.");
+						JOptionPane.showMessageDialog(null, "Debe seleccionar un aï¿½o.");
 					}else {
 						CAE.interesCompuesto.set(comboBox_1.getSelectedIndex()-1, Float.parseFloat(textField.getText()));
 						actualizarTasas();
@@ -108,7 +108,7 @@ public class MainWindow extends JFrame {
 				}
 			}
 		});
-		btnCambiarTasa.setBounds(422, 44, 116, 25);
+		btnCambiarTasa.setBounds(451, 44, 143, 25);
 		contentPane.add(btnCambiarTasa);
 		
 		JButton btnAgregarAutomovil = new JButton("Agregar automovil");
@@ -118,7 +118,7 @@ public class MainWindow extends JFrame {
 				formAA.setVisible(true);
 			}
 		});
-		btnAgregarAutomovil.setBounds(12, 117, 154, 25);
+		btnAgregarAutomovil.setBounds(12, 117, 180, 25);
 		contentPane.add(btnAgregarAutomovil);
 		
 		JButton btnCalcularCae = new JButton("Calcular CAE");
@@ -134,12 +134,12 @@ public class MainWindow extends JFrame {
 					FormCAE formCAE = new FormCAE(autos);
 					formCAE.setVisible(true);
 				}else {
-					JOptionPane.showMessageDialog(null, "Todos los años deben tener una tasa mayor o igual a 0.");
+					JOptionPane.showMessageDialog(null, "Todos los aï¿½os deben tener una tasa mayor o igual a 0.");
 				}
 
 			}
 		});
-		btnCalcularCae.setBounds(845, 546, 109, 25);
+		btnCalcularCae.setBounds(829, 546, 125, 25);
 		contentPane.add(btnCalcularCae);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -165,7 +165,7 @@ public class MainWindow extends JFrame {
 				MainWindow.this.actualizarTabla();
 			}
 		});
-		btnEliminarAuto.setBounds(845, 117, 109, 25);
+		btnEliminarAuto.setBounds(829, 117, 125, 25);
 		contentPane.add(btnEliminarAuto);
 		
 		JButton btnAgregarCosto = new JButton("Agregar costo");
@@ -179,7 +179,7 @@ public class MainWindow extends JFrame {
 				}
 			}
 		});
-		btnAgregarCosto.setBounds(539, 117, 137, 25);
+		btnAgregarCosto.setBounds(504, 118, 137, 25);
 		contentPane.add(btnAgregarCosto);
 		
 		JButton btnAgregarReventa = new JButton("Agregar $ reventa");
@@ -193,25 +193,25 @@ public class MainWindow extends JFrame {
 				}
 			}
 		});
-		btnAgregarReventa.setBounds(688, 117, 145, 25);
+		btnAgregarReventa.setBounds(657, 118, 160, 25);
 		contentPane.add(btnAgregarReventa);
 
-		comboBox.setBounds(335, 120, 192, 22);
+		comboBox.setBounds(300, 121, 192, 22);
 		contentPane.add(comboBox);
 		
 		JLabel lblAo = new JLabel("A\u00F1o:");
-		lblAo.setBounds(227, 49, 36, 14);
+		lblAo.setBounds(246, 49, 36, 14);
 		contentPane.add(lblAo);
 		
-		comboBox_1.setBounds(258, 46, 154, 20);
+		comboBox_1.setBounds(285, 46, 154, 20);
 		contentPane.add(comboBox_1);
 		
 		JCheckBox chckbxFinPeriodo = new JCheckBox("Fin del periodo");
-		chckbxFinPeriodo.setBounds(838, 44, 116, 25);
+		chckbxFinPeriodo.setBounds(774, 73, 180, 25);
 		contentPane.add(chckbxFinPeriodo);
 		
 		JCheckBox chckbxPrincipioPeriodo = new JCheckBox("Principio del periodo");
-		chckbxPrincipioPeriodo.setBounds(688, 44, 145, 25);
+		chckbxPrincipioPeriodo.setBounds(774, 44, 180, 25);
 		
 		chckbxPrincipioPeriodo.setSelected(true);
 		chckbxFinPeriodo.setSelected(false);
@@ -238,10 +238,10 @@ public class MainWindow extends JFrame {
 		contentPane.add(chckbxPrincipioPeriodo);
 		
 		JLabel lblReemplazoAl = new JLabel("Realizar reemplazo al:");
-		lblReemplazoAl.setBounds(550, 48, 145, 16);
+		lblReemplazoAl.setBounds(612, 48, 160, 16);
 		contentPane.add(lblReemplazoAl);
 		comboBox.addItem("Seleccione un auto");
-		comboBox_1.addItem("Seleccione un año");
+		comboBox_1.addItem("Seleccione un aï¿½o");
 
 	}
 	
@@ -280,11 +280,11 @@ public class MainWindow extends JFrame {
 				for(int j=0;j<aux.getCostos(i).size();j++) {
 					costototal+=aux.getCostos(i).get(j);
 				}
-				JLabel lblMontoAnual = new JLabel("Costos totales del año "+i+": "+costototal+".");
+				JLabel lblMontoAnual = new JLabel("Costos totales del aï¿½o "+i+": "+costototal+".");
 				lblMontoAnual.setBounds(12, 56+21*i, 390, 15);
 				panel_2.add(lblMontoAnual);
 				
-				JLabel lblPrecioReventa = new JLabel("El precio de reventa para el año "+i+" es de: "+aux.getPrecioReventa(i)+".");
+				JLabel lblPrecioReventa = new JLabel("El precio de reventa para el aï¿½o "+i+" es de: "+aux.getPrecioReventa(i)+".");
 				lblPrecioReventa.setBounds(402, 56+21*i, 390, 15);
 				panel_2.add(lblPrecioReventa);
 				
@@ -319,12 +319,12 @@ public class MainWindow extends JFrame {
 	
 	private void actualizarTasas() {
 		comboBox_1.removeAllItems();
-		comboBox_1.addItem("Seleccione un año");
+		comboBox_1.addItem("Seleccione un aï¿½o");
 		for(int i=0; i<CAE.interesCompuesto.size();i++) {
 			if(CAE.comienzo == true) {
-				comboBox_1.addItem("Año "+i+" tasa "+CAE.interesCompuesto.get(i));
+				comboBox_1.addItem("Aï¿½o "+i+" tasa "+CAE.interesCompuesto.get(i));
 			}else {
-				comboBox_1.addItem("Año "+new Integer(i+1)+" tasa "+CAE.interesCompuesto.get(i));
+				comboBox_1.addItem("Aï¿½o "+new Integer(i+1)+" tasa "+CAE.interesCompuesto.get(i));
 			}
 		}
 	}

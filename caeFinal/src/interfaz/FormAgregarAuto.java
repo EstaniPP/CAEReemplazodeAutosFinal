@@ -33,7 +33,7 @@ public class FormAgregarAuto extends JFrame {
 		setTitle("Nuevo");
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 286, 243);
+		setBounds(100, 100, 310, 224);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -42,19 +42,19 @@ public class FormAgregarAuto extends JFrame {
 		setResizable(false);
 		
 		JLabel lblAgregarNuevoAuto = new JLabel("Agregar nuevo auto");
-		lblAgregarNuevoAuto.setBounds(12, 13, 113, 16);
+		lblAgregarNuevoAuto.setBounds(12, 13, 136, 16);
 		contentPane.add(lblAgregarNuevoAuto);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(12, 31, 250, 2);
+		separator.setBounds(12, 31, 286, 2);
 		contentPane.add(separator);
 		
 		JLabel lblNombreDelAuto = new JLabel("Nombre del auto:");
-		lblNombreDelAuto.setBounds(12, 48, 113, 16);
+		lblNombreDelAuto.setBounds(12, 48, 136, 16);
 		contentPane.add(lblNombreDelAuto);
 		
 		textFieldNombre = new JTextField();
-		textFieldNombre.setBounds(146, 45, 116, 22);
+		textFieldNombre.setBounds(182, 45, 106, 22);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
@@ -63,7 +63,7 @@ public class FormAgregarAuto extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		textFieldDuracion = new JTextField();
-		textFieldDuracion.setBounds(146, 74, 116, 22);
+		textFieldDuracion.setBounds(182, 75, 106, 22);
 		contentPane.add(textFieldDuracion);
 		textFieldDuracion.setColumns(10);
 		
@@ -72,7 +72,7 @@ public class FormAgregarAuto extends JFrame {
 		contentPane.add(lblInversionInicial);
 		
 		textFieldInversion = new JTextField();
-		textFieldInversion.setBounds(146, 103, 116, 22);
+		textFieldInversion.setBounds(182, 104, 106, 22);
 		contentPane.add(textFieldInversion);
 		textFieldInversion.setColumns(10);
 		
@@ -108,7 +108,7 @@ public class FormAgregarAuto extends JFrame {
 				}
 			}
 		});
-		btnAgregar.setBounds(165, 158, 97, 25);
+		btnAgregar.setBounds(191, 158, 97, 25);
 		contentPane.add(btnAgregar);
 	}
 	private static boolean esInteger(String str){

@@ -2,19 +2,19 @@ package comportamental;
 
 import java.util.ArrayList;
 
-public class CostosAño {
-	private Integer año;
+public class CostosAno {
+	private Integer ano;
 	private ArrayList<Float> costos;
 	private Float precioReventa;
 	
-	public CostosAño(Integer año) {
-		this.año = año;
+	public CostosAno(Integer ano) {
+		this.ano = ano;
 		costos = new ArrayList<Float>();
 		precioReventa = 0.0f;
 	}
 	
-	public Integer getAño() {
-		return año;
+	public Integer getAno() {
+		return ano;
 	}
 	
 	public ArrayList<Float> getCostos() {

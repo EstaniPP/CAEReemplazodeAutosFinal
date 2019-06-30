@@ -30,7 +30,7 @@ public class FormAgregarPrecioReventa extends JFrame {
 
 		setTitle("CAE");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 265, 278);
+		setBounds(100, 100, 280, 278);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -51,14 +51,14 @@ public class FormAgregarPrecioReventa extends JFrame {
 		contentPane.add(lblMonto);
 		
 		JComboBox<Integer> comboBoxAno = new JComboBox<Integer>();
-		comboBoxAno.setBounds(113, 58, 116, 22);
+		comboBoxAno.setBounds(142, 58, 116, 22);
 		contentPane.add(comboBoxAno);
 		for(int i=0;i<auto.getDuracion();i++) {
 			comboBoxAno.addItem(i);
 		}
 		
 		txtMonto = new JTextField();
-		txtMonto.setBounds(113, 87, 116, 22);
+		txtMonto.setBounds(142, 88, 116, 22);
 		contentPane.add(txtMonto);
 		txtMonto.setColumns(10);
 		
@@ -75,7 +75,7 @@ public class FormAgregarPrecioReventa extends JFrame {
 				}
 			}
 		});
-		btnAgregar.setBounds(132, 193, 97, 25);
+		btnAgregar.setBounds(161, 193, 97, 25);
 		contentPane.add(btnAgregar);
 		
 		JButton btnCancelar = new JButton("Cerrar");
@@ -88,15 +88,15 @@ public class FormAgregarPrecioReventa extends JFrame {
 		contentPane.add(btnCancelar);
 		
 		JLabel lblAclaracionElPrecio = new JLabel("Aclaracion: el precio de reventa es ");
-		lblAclaracionElPrecio.setBounds(12, 119, 217, 16);
+		lblAclaracionElPrecio.setBounds(12, 119, 256, 16);
 		contentPane.add(lblAclaracionElPrecio);
 		
 		JLabel lblUnicoPorLo = new JLabel("unico, por lo que el precio nuevo ");
-		lblUnicoPorLo.setBounds(12, 136, 217, 16);
+		lblUnicoPorLo.setBounds(12, 136, 256, 16);
 		contentPane.add(lblUnicoPorLo);
 		
 		JLabel lblSobreescribiraElAnterior = new JLabel("sobreescribira el anterior.");
-		lblSobreescribiraElAnterior.setBounds(12, 153, 217, 16);
+		lblSobreescribiraElAnterior.setBounds(12, 153, 256, 16);
 		contentPane.add(lblSobreescribiraElAnterior);
 	}
 	
